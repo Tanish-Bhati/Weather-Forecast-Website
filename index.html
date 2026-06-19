@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <style>
+        .home {
+            background-image: url(hero.jpg);
+            background-size: cover;
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nac {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 2px solid rgb(88, 208, 241); */
+            /* box-shadow: 1px 1px 5px rgb(61, 222, 234); */
+        }
+
+        .navbar {
+            display: flex;
+            padding: 20px;
+        }
+
+        .links {
+            display: flex;
+            gap: 50px;
+            color: rgb(0, 0, 0);
+            font-size: larger;
+        }
+
+        .links div:hover {
+            color: rgb(43, 192, 226);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .heading {
+            margin-left: 50px;
+            font-size: 4rem;
+            font-weight: 700;
+            /* width: 200px; */
+        }
+
+        .sub_heading {
+            margin-left: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sec_head {
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .sec_des {
+            display: flex;
+            text-align: center;
+            margin: 50px;
+            font-size: large;
+        }
+        
+        .m_head{
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+        }
+        .mission {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+
+        <div class="nac">
+            <nav class="logo">
+                <img src="logo.png" width="200px" alt="Logo">
+            </nav>
+            <div class="navbar">
+                <nav class="links">
+                    <div>Home</div>
+                    <div>About</div>
+                    <div>Contact</div>
+                    <div>Location</div>
+                </nav>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="heading">
+                Know the Weather <br> Before <br> It Knows You...
+            </div>
+            <br><br><br>
+            <div class="sub_heading">
+                Track temperature, rainfall, wind, and forecasts with precision and confidence.
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="about">
+        <div class="sec_head">
+            About Weather Forecast
+        </div>
+        <div class="sec_des">
+            At Weather Forecast, we provide accurate, real-time weather updates to help you plan your day with
+            confidence. Our platform delivers current conditions, temperature trends, rainfall predictions, wind
+            information, and detailed forecasts for locations around the world.
+            <br>
+            Whether you're preparing for travel, outdoor activities, or your daily routine, our mission is to keep you
+            informed with reliable and easy-to-understand weather insights.
+        </div>
+        <div class="m_head">
+            Mission
+        </div>
+        
+        <div class="mission">
+            Our mission is to make weather information accessible, accurate, and useful for everyone by delivering timely forecasts and
+            dependable climate data.
+        </div>
+    </div>
+</body>
+
+</html>
