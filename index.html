@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -93,7 +93,6 @@
 </head>
 
 <body>
-    <!--This is testing for publishing  -->
     <div class="home">
 
         <div class="nac">
@@ -141,6 +140,626 @@
             dependable climate data.
         </div>
     </div>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureSpots</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        body {
+            font-family: "Quicksand", sans-serif;
+        }
+
+        .home {
+            background-image: url(hero.jpg);
+            background-size: cover;
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nac {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            padding: 20px;
+        }
+
+        .links {
+            display: flex;
+            gap: 50px;
+            color: rgb(0, 0, 0);
+            font-size: larger;
+        }
+        .links div{
+            position: relative;
+            transition: transition 0.4s ease;
+        }
+        .links div::after{
+            content: " ";
+            bottom: -3px;
+            height: 2px;
+            left: 0px;
+            width: 0%;
+            position:absolute;
+            transition: width 0.4s;
+            background-color: rgb(253, 118, 0);
+        }
+        .links div:hover::after{
+            width: 100%;
+        }
+        .links div:hover {
+            transform: scale(1.05);
+            color: rgb(253, 118, 0);
+            cursor: pointer;
+        }
+
+        .heading {
+            margin-left: 50px;
+            color: aliceblue;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .sub_heading {
+            margin-left: 50px;
+            color: azure;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sec_head {
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .sec_des {
+            display: flex;
+            text-align: center;
+            margin: 50px;
+            font-size: large;
+        }
+
+        .m_head {
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .mission {
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+            font-size: large;
+        }
+
+        .about_nature {
+            display: flex;
+            margin-left: 50px;
+            margin-right: 70px;
+            gap: 50px;
+            align-content: center;
+        }
+
+        .about_nature_head {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .about_nature_head img {
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease , box-shadow 0.3s ease;
+        }
+        .about_nature_head img:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .about_nature_subhead {
+            font-size: large;
+        }
+
+        .inner_cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .inner_cards img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-sizing 0.3s ease;
+        }
+        .inner_cards img:hover{
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .why_nature {
+            display: flex;
+            margin-left: 50px;
+            margin-right: 70px;
+            gap: 50px;
+        }
+
+        .why_nature_img img {
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .why_nature_desc {
+            font-size: large;
+        }
+
+        .valley {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .dc {
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .destinations {
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+
+        .exp_more {
+            border: 2px solid rgb(126, 126, 126);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-family: "Quicksand", sans-serif;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .exp_more:hover {
+            transform: scale(1.05);
+            border: 2px solid rgb(0, 136, 255);
+            color: rgb(0, 136, 255);
+            box-shadow: 0 0px 15px rgba(0, 136, 255);
+            cursor: pointer;
+        }
+        .nature_gallery_heading{
+            display: flex;
+            justify-content: center;
+        }
+        .nature_gallery {
+            column-count: 4;
+            column-gap: 20px;
+            margin-left: 50px;
+            margin-right: 70px;
+        }
+
+        .nature_gallery img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            break-inside: avoid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nature_gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        .travel{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-left: 50px;
+            margin-right: 70px;
+        }
+        .travel_desc{
+            font-size: large;
+        }
+        .tc{
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+
+        <div class="nac">
+            <nav class="logo">
+                <img src="logo.png" width="200px" alt="Logo">
+            </nav>
+            <div class="navbar">
+                <nav class="links">
+                    <div>Home</div>
+                    <div>About</div>
+                    <div>Contact</div>
+                    <div>Location</div>
+                </nav>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="heading">
+                Discover <br> the Beauty of Nature
+            </div>
+            <br><br><br>
+            <div class="sub_heading">
+                Explore breathtaking landscapes, hidden gems, and the wonders of our natural world. </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <!-- About Nature -->
+    <div class="about_nature">
+        <div class="about_nature_head">
+            <img src="about_nature.jpg
+            " width="350px" alt="img">
+        </div>
+        <div class="about_nature_subhead">
+            <h1>About Nature</h1> <br>
+            Nature is the heart of our planet, offering breathtaking landscapes, diverse wildlife, and the resources
+            that sustain all forms of life. From towering mountains and dense forests to peaceful lakes and flowing
+            rivers, nature inspires us with its beauty and harmony. <br><br><br>
+
+            It provides clean air to breathe, fresh water to drink, and fertile land to grow food. Beyond its physical
+            benefits, nature also promotes mental well-being, helping us relax, recharge, and reconnect with the world
+            around us.
+            <br><br><br>
+            As our environment faces increasing challenges, it is more important than ever to appreciate, protect, and
+            preserve nature for future generations. Every tree planted, every forest protected, and every sustainable
+            choice made contributes to a healthier and greener planet.
+            <br><br><br>
+            <h2>Nature's insights</h2>
+            <br><br><br>
+            <div class="cards">
+                <div class="inner_cards">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                    <img class="c1" width="100px"
+                        src="https://images.pexels.com/photos/31225243/pexels-photo-31225243.jpeg" alt="#">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <!-- Why nature matters -->
+    <div class="why_nature">
+        <div class="why_nature_desc">
+            <h2>
+                Why nature matters??
+            </h2>
+            <p>
+                Nature is essential for the survival and well-being of all living beings. It provides the air we
+                breathe, the water we drink, and the food we eat. Forests, rivers, oceans, and wildlife work together to
+                maintain a balanced ecosystem that supports life on Earth.
+                <br>
+                Beyond meeting our basic needs, nature also
+                improves our physical and mental health by offering peaceful environments that reduce stress and inspire
+                creativity.
+                <br><br>
+                As climate change and environmental challenges continue to grow, protecting nature has become more
+                important than ever. By preserving forests, conserving wildlife, and using resources responsibly, we can
+                ensure a healthier and more sustainable future for generations to come. Nature is not just a part of our
+                world—it is the foundation of life itself.
+            </p>
+        </div>
+        <div class="why_nature_img">
+            <img width="400px" src="https://images.pexels.com/photos/30819811/pexels-photo-30819811.jpeg" alt="img">
+        </div>
+    </div>
+    <br><br><br>
+    <div class="destinations">
+        <div class="valley">
+            <div class="valley_img">
+                <img class="dc" src="https://wallpaperaccess.com/full/5290414.jpg" alt="#">
+            </div>
+            <div class="valley_desc">
+                <h3>Valley Of Flowers </h3>
+                <br>
+                Nestled in the Himalayas of Uttarakhand, the Valley of Flowers is a breathtaking paradise covered with
+                vibrant alpine flowers.
+                <br> Its colorful meadows, snow-capped peaks, and rich biodiversity make it one of India's most
+                beautiful natural destinations.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_desc">
+                <h3>Kerala Backwaters </h3> <br>
+                The Kerala Backwaters offer a serene escape through a network of tranquil lakes, lagoons, and canals.
+                <br> Surrounded by coconut palms and lush greenery, this destination showcases the peaceful beauty of
+                nature and traditional village life.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+            <div class="valley_img">
+                <img class="dc" src="https://wallpaperaccess.com/full/5180704.jpg" alt="#">
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_img">
+                <img class="dc" src="https://images.pexels.com/photos/1242983/pexels-photo-1242983.jpeg" alt="#">
+            </div>
+            <div class="valley_desc">
+                <h3>Nubra Valley </h3> <br>
+                Located in the heart of Ladakh, Nubra Valley is a unique landscape where towering mountains meet vast
+                sand dunes.
+                <br> Crystal-clear rivers, dramatic scenery, and stunning sunsets create an unforgettable experience for
+                nature lovers.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_desc">
+                <h3>Living Root Bridges </h3> <br>
+                Hidden within the dense forests of Meghalaya, the Living Root Bridges are a remarkable example of nature
+                and human harmony.
+                <br> Formed from the roots of ancient rubber trees, these bridges stand strong amidst waterfalls and
+                lush green surroundings.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+            <div class="valley_img">
+                <img class="dc" src="https://images.pexels.com/photos/27820314/pexels-photo-27820314.jpeg" alt="#">
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_img">
+                <img class="dc" src="https://wallpaperaccess.com/full/3084028.jpg" alt="#">
+            </div>
+            <div class="valley_desc">
+                <h3>Banff National Park </h3> <br>
+                Banff National Park is a natural wonder featuring turquoise lakes, majestic mountains, and abundant
+                wildlife.
+                <br> Its breathtaking landscapes make it one of the most iconic and picturesque destinations in the
+                world.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_desc">
+                <h3>Yosemite National Park </h3> <br>
+                Yosemite is renowned for its towering granite cliffs, giant sequoia trees, and spectacular waterfalls.
+                <br> The park's diverse landscapes provide visitors with endless opportunities to explore the beauty of
+                the natural world.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+            <div class="valley_img">
+                <img class="dc" src="https://wallpaperaccess.com/full/4956359.jpg" alt="#">
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_img">
+                <img class="dc" src="https://wallpaperaccess.com/full/3823562.jpg" alt="#">
+            </div>
+            <div class="valley_desc">
+                <h3>Plitvice Lakes National Park </h3> <br>
+                Plitvice Lakes National Park is famous for its crystal-clear lakes connected by cascading waterfalls.
+                <br> The vibrant shades of blue and green, combined with dense forests, create a magical and peaceful
+                atmosphere.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="valley">
+            <div class="valley_desc">
+                <h3>Milford Sound </h3><br>
+                Milford Sound is a stunning fjord surrounded by towering peaks, lush rainforests, and cascading
+                waterfalls.
+                <br> Often described as one of the most beautiful places on Earth, it offers breathtaking views in every
+                direction.
+                <br><br><br>
+                <div class="valley_button">
+                    <button class="exp_more">
+                        Explore more
+                    </button>
+                </div>
+            </div>
+            <div class="valley_img">
+                <img class="dc" src="https://wallpaperaccess.com/full/5718166.jpg" alt="#">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Nature Gallery -->
+     <br><br><br>
+     <div class="nature_gallery_heading">
+        <h1>Nature Gallery</h1>
+     </div>
+     <br><br><br>
+    <div class="nature_gallery">
+        <img width="200px" src="https://images.pexels.com/photos/15303469/pexels-photo-15303469.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/34043042/pexels-photo-34043042.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/31888585/pexels-photo-31888585.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/27665342/pexels-photo-27665342.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/27428687/pexels-photo-27428687.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/1651053/pexels-photo-1651053.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/29474331/pexels-photo-29474331.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/30819804/pexels-photo-30819804.jpeg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/10972751/pexels-photo-10972751.jpeg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/736x/cc/df/16/ccdf16bceb3cb169b74d853ac041eb7f.jpg" alt="#">
+        <img width="200px" src="https://images.pexels.com/photos/30555093/pexels-photo-30555093.jpeg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/1200x/26/38/b9/2638b9a967220526d64fa682db00e9c1.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/736x/91/d1/ad/91d1adb8896e61b16ffc407165a5d629.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/736x/48/bb/bd/48bbbd995c8bda8dd5b5a7370aa61dfe.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/736x/3d/e6/68/3de668a6bec14e82c3a56f7367d59d7a.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/1200x/08/45/b6/0845b6ccf18b60ed696415035a62658f.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/736x/1a/cd/fd/1acdfd463d872d07cdbf0c49a5f359d6.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/1200x/4a/cf/4a/4acf4accfc843ad192e5340319b00663.jpg" alt="#">
+        <img width="200px" src="https://i.pinimg.com/1200x/f0/9b/ee/f09bee69ba298b858d05c4766237c182.jpg" alt="#">
+    </div>
+
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- ! Marking this section for dynamic card adding by the real user and their stories -->
+    <!-- travel stories --> 
+    <div class="travel">
+        <div>
+            <img class="tc" src="https://wallpaperaccess.com/full/1635203.jpg" alt="#">
+        </div>
+        <div class="travel_desc">
+            Walking through the Valley of Flowers felt like stepping into a dream.
+            <br> The colorful blooms stretched across the hills while the cool 
+            mountain breeze made the journey unforgettable.
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="about">
+        <div class="sec_head">
+            About Weather Forecast
+        </div>
+        <div class="sec_des">
+            At Weather Forecast, we provide accurate, real-time weather updates to help you plan your day with
+            confidence. Our platform delivers current conditions, temperature trends, rainfall predictions, wind
+            information, and detailed forecasts for locations around the world.
+            <br>
+            Whether you're preparing for travel, outdoor activities, or your daily routine, our mission is to keep you
+            informed with reliable and easy-to-understand weather insights.
+        </div>
+        <div class="m_head">
+            Mission
+        </div>
+
+        <div class="mission">
+            Our mission is to make weather information accessible, accurate, and useful for everyone by delivering
+            timely forecasts and
+            dependable climate data.
+        </div>
+    </div>
+    <!-- About Nature
+↓
+
+↓
+Travel Stories
+↓
+Conservation & Sustainability
+↓
+Contact
+Footer
+↓ -->
+
 </body>
 
 </html>
